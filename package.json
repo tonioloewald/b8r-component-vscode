@@ -1,0 +1,27 @@
+{
+    "name": "b8r-component",
+    "displayName": "b8r-component",
+    "description": "a language extension for writing b8r components",
+    "publisher": "b8r",
+    "version": "0.0.1",
+    "engines": {
+        "vscode": "^1.46.0"
+    },
+    "categories": [
+        "Programming Languages"
+    ],
+    "contributes": {
+      "grammars": [
+        {
+          "path": "./syntaxes/b8r-html.json",
+          "scopeName": "inline.b8r-html",
+          "injectTo": ["source.js"]
+        },
+        {
+          "path": "./syntaxes/b8r-css.json",
+          "scopeName": "inline.b8r-css",
+          "injectTo": ["source.js"]
+        }
+      ]
+    }
+}
