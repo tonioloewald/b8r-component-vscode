@@ -10,9 +10,24 @@ simply tells vscode to syntax-color these as `css` and `javascript`.
 
 ```
 export default {
-  html:
-`
+  html: `
 ... html goes here
 `
 }
 ```
+
+Unfortunately, vscode cannot match tokens across multiple lines, so if you write:
+
+```
+export default {
+  css:
+`
+.foo {
+  color: black;
+}
+`
+}
+```
+
+It won't recognize the `css` (in this case). Just remove the newline between `css:` and the backtick and
+it will hilite correctly.
