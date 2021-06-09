@@ -1,0 +1,9 @@
+{
+	"component template": {
+		"prefix": "component",
+		"body": [
+			"/**\n# ${1:component-name}\n*/\n\nexport default {\n  css: `\n    ._component_ > div { color: yellow }\n  `,\n  html: `\n    <div>\n      this text will be yellow\n    </div>\n  `,\n  async initialValue({\n    // only destructure the items you need\n    component,           // this is the element that the component is inserted into\n    b8r,                 // it's b8r!\n    find,                // b8r.findWithin(component, ...)\n    findOne,             // b8r.findOneWithin(component, ...) \n    get,                 // get (within the component's private data)\n    set,                 // set (within the component's private data)\n    on,                  // b8r.on(component, ...)\n    touch                // refresh the component\n  }){\n    // your setup code here\n    return {\n      // initial state of component\n    }\n  },\n  async load({\n    // only destructure the items you need\n    component,           // this is the element that the component is inserted into\n    b8r,                 // it's b8r!\n    find,                // b8r.findWithin(component, ...)\n    findOne,             // b8r.findOneWithin(component, ...) \n    data,                // data is a proxy of the component's private data\n    get,                 // get (within the component's private data)\n    set,                 // set (within the component's private data)\n    on,                  // b8r.on(component, ...)\n    touch                // refresh the component\n  }){\n    // your javascript goes here\n  },\n}"
+		],
+		"description": "b8r-component template"
+	}
+}

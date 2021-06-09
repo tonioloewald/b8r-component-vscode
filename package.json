@@ -8,9 +8,16 @@
         "vscode": "^1.46.0"
     },
     "categories": [
-        "Programming Languages"
+        "Programming Languages",
+        "Snippets"
     ],
     "contributes": {
+      "snippets": [
+        {
+          "language": "javascript",
+          "path": "./snippets.json"
+        }
+      ],
       "grammars": [
         {
           "path": "./syntaxes/b8r-html.json",
