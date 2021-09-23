@@ -1,36 +1,49 @@
 {
-    "name": "b8r-component",
-    "displayName": "b8r-component",
-    "description": "a language extension for writing b8r components",
-    "publisher": "b8r",
-    "version": "0.0.1",
-    "engines": {
-        "vscode": "^1.46.0"
-    },
-    "categories": [
-        "Programming Languages",
-        "Snippets"
+  "name": "b8r-component",
+  "displayName": "b8r-component",
+  "description": "a language extension for writing b8r components",
+  "publisher": "b8r",
+  "repository": "https://github.com/tonioloewald/b8r-component-vscode",
+  "version": "0.0.2",
+  "engines": {
+    "vscode": "^1.46.0"
+  },
+  "categories": [
+    "Programming Languages",
+    "Snippets"
+  ],
+  "contributes": {
+    "snippets": [
+      {
+        "language": "javascript",
+        "path": "./snippets.json"
+      },
+      {
+        "language": "html",
+        "path": "./snippets.json"
+      },
+      {
+        "language": "css",
+        "path": "./snippets.json"
+      }
     ],
-    "contributes": {
-      "snippets": [
-        {
-          "language": "javascript",
-          "path": "./snippets.json"
-        }
-      ],
-      "grammars": [
-        {
-          "language": "javascript",
-          "path": "./syntaxes/b8r-html.json",
-          "scopeName": "inline.b8r-html",
-          "injectTo": ["source.js"]
-        },
-        {
-          "language": "javascript",
-          "path": "./syntaxes/b8r-css.json",
-          "scopeName": "inline.b8r-css",
-          "injectTo": ["source.js"]
-        }
-      ]
-    }
+    "grammars": [
+      {
+        "language": "javascript",
+        "path": "./syntaxes/b8r-html.json",
+        "scopeName": "inline.b8r-html",
+        "injectTo": [
+          "source.js"
+        ]
+      },
+      {
+        "language": "javascript",
+        "path": "./syntaxes/b8r-css.json",
+        "scopeName": "inline.b8r-css",
+        "injectTo": [
+          "source.js"
+        ]
+      }
+    ]
+  }
 }

@@ -49,39 +49,23 @@ export default {
     ._component_ > div { color: yellow }
   `,
   html: `
-    <div>
-      this text will be yellow
-    </div>
+    <div>this text is yello</div>
   `,
-  async initialValue({
-    // only destructure the items you need
-    component,           // this is the element that the component is inserted into
-    b8r,                 // it's b8r!
-    find,                // b8r.findWithin(component, ...)
-    findOne,             // b8r.findOneWithin(component, ...) 
-    get,                 // get (within the component's private data)
-    set,                 // set (within the component's private data)
-    on,                  // b8r.on(component, ...)
-    touch                // refresh the component
-  }){
+  /*
+    component (container element), b8r, data (component private data)
+    find(selector), findOne(selector), get(path), set(path), on(event, path), touch(path)
+  */
+  async initialValue({ b8r, component, find, findOne, on, get, set, touch }){
     // your setup code here
+    // do not call get/set here since you are still creating the data!
     return {
       // initial state of component
     }
   },
-  async load({
-    // only destructure the items you need
-    component,           // this is the element that the component is inserted into
-    b8r,                 // it's b8r!
-    find,                // b8r.findWithin(component, ...)
-    findOne,             // b8r.findOneWithin(component, ...) 
-    data,                // data is a proxy of the component's private data
-    get,                 // get (within the component's private data)
-    set,                 // set (within the component's private data)
-    on,                  // b8r.on(component, ...)
-    touch                // refresh the component
-  }){
+  async load({ b8r, component, data, find, findOne, on, get, set, touch }){
     // your javascript goes here
   },
 }
 ```
+
+Finally, writing `b8r` code involves typing `_component_` a lot. So there's a snippet for that.
