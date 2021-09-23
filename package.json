@@ -20,11 +20,13 @@
       ],
       "grammars": [
         {
+          "language": "javascript",
           "path": "./syntaxes/b8r-html.json",
           "scopeName": "inline.b8r-html",
           "injectTo": ["source.js"]
         },
         {
+          "language": "javascript",
           "path": "./syntaxes/b8r-css.json",
           "scopeName": "inline.b8r-css",
           "injectTo": ["source.js"]
